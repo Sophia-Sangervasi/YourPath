@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <title>
+      Your Path
+    </title>
+      <link rel="icon" type="image/png" href="logofav.ico" sizes="32x32" />
+
+
+    <!-----CSS-- (eventually will be added to it's own file)-->
+    <style type = "text/css">
+
+      h1{
+        margin: 0 auto;
+        text-align: center;
+        padding: 5px;
+        max-width: 1200px;
+      }
+
+      p{
+        margin: 5px;
+        text-align: block;
+        padding: 5px;
+      }
+
+      #intro{
+        margin: 30px;
+        text-align: block;
+        padding: 30px;
+
+      }
+
+      #container {
+        margin-top: 50px;
+        margin-right: 15px;
+        float: left;
+        padding: 5px;
+        overflow: hidden;
+      }
+
+      #disclaimer{
+        margin: 0 auto;
+        text-align:left;
+        padding: 30px;
+        max-width: 1200px;
+      }
+
+
+      #disclaimer #disclamerBullet{
+
+        margin-left: 15px;
+        text-align: left;
+        padding: 5px;
+        max-width: 1200px;
+      }
+
+      #majorRequirements{
+        margin: 0 auto;
+        text-align:left;
+        padding: 5px;
+        max-width: 1200px;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+
+
+
+  </style>
+
+  </head>
+
+    <body>
+
+
+
+      <div id = "container">
+
+        <figure>
+          <img src ="yp.PNG" class ="center" style="width:536px;height:367px;" >
+        </figure>
+
+        <h1>Welcome to Your Path!</h1>
+
+        <p id = "intro"> Hello, welome to Your Path! This tool was created for Unversity of Puget Sound Computer Science Students to better plan their course path
+          in completing the Computer Science major. The main objective of this tool is to visually display and plan the next steps for Computer Science students
+          (This is not a substitution for an academic advisor, and class offerings may vary).
+        </p>
+
+          <div id = "disclaimer">
+            <h3> Disclaimer</h3>
+
+            <p>When using this tool the following is assumed about your college career path:
+            <div id = "disclaimerBullet">
+              <ul>
+              <li> You are only taking courses at the University of Puget Sound</li>
+              <li>You have passed all course with a C- or higher</li>
+              <li>You are Computer Science student that is working torwards the standard option for Batchelor of Science in Computer Science at the University of Puget Sound </li>
+              </ul>
+
+              <br> NOTE: This tool does not account for the University of Puget Sound liberal arts requirements or the 32 credit graduation requirement </br>
+          </div>
+            </p>
+
+            <div id ="majorRequirements">
+              <h3>Major Requirements</h3>
+              <div>
+                <p>The course requirements for earning a B.S. in Computer Science at the University of Puget Sound is as follows:
+                  <ul>
+                    <li> Completion of the sequence CSCI 161, CSCI 261, CSCI 240, CSCI 281</li>
+                    <li> Completion of CSCI 291, CSCI 361, CSCI 475 </li>
+                    <li> Completion of Math 210 or Math 290 and an upper-division mathematics course from List B (please see the University of Puget Sound's Computer Science department website for List B) may be substituted
+                    for Math 210 if the student earns a C or higher in both courses</li>
+                    <li>Completion of two upper-division electives (CSCI 300 level or higher)</li>
+                    <li>Completion of capstone CSCI 440</li>
+                  </ul>
+                </p>
+
+                  <h3>Directions</h3>
+                  <p>
+                    <ol>
+                      <li>Select your major using the dropdown menu.</li>
+                      <li>Select your class standing using the dropdown menu (NOTE: If you select the Freshman class standing, it is assummed that you have not completed any computer science classes prior to your enrollment).</li>
+                      <li>If your class standing is not Freshman then use the dropdown menu to choose courses that you have already taken or are currently taking (it is assumed that you will pass the classes you are currently taking).</li>
+                      <li>Finally click the Plan! button then sit back and relax!</li>
+                    </ol>
+                  </p>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class= "container">
+
+            <div id= "whatMajor">
+              <h4>What is your major?</h4>
+              <label>Choose your major: </label>
+              <select class="selectpicker" >
+                <option>Computer Science</option>
+              </select>
+
+          </div>
+
+          <div id="classStanding">
+            <h4>What is your class standing?</h4>
+            <label>Please choose your class stading</label>
+            <select class="selectpicker">
+              <option>Freshman</option>
+              <option>Sophomore</option>
+              <option>Junior</option>
+              <option>Senior</option>
+            </select>
+
+
+          </div>
+
+          <div id="coursesTaken">
+            <h4>What is your courses have you taken?</h4>
+            <label>Please choose your courses</label>
+            <select class="selectpicker">
+              <option>Freshman</option>
+              <option>Sophomore</option>
+              <option>Junior</option>
+              <option>Senior</option>
+            </select>
+
+
+          </div>
+
+      </div>
+
+
+
+    </body>
+</html>
