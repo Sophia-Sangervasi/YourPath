@@ -153,6 +153,7 @@
               <h4>What is your major?</h4>
               <label>Choose your major: </label>
               <select class="selectpicker" >
+                <option selected>Choose...</option>
                 <option>Computer Science</option>
               </select>
 
@@ -162,6 +163,7 @@
             <h4>What is your class standing?</h4>
             <label>Please choose your class stading</label>
             <select class="selectpicker">
+              <option selected>Choose...</option>
               <option>Freshman</option>
               <option>Sophomore</option>
               <option>Junior</option>
@@ -172,6 +174,7 @@
               <h4>What semester are you in?</h4>
               <label>Please choose your current semester</label>
               <select class="selectpicker">
+                <option selected>Choose...</option>
                 <option>Fall</option>
                 <option>Spring</option>
               </select>
@@ -184,11 +187,17 @@
             <h4>What courses have you taken?</h4>
             <label>Please choose your courses</label>
             <select class="selectpicker">
-              <option>Freshman</option>
-              <option>Sophomore</option>
-              <option>Junior</option>
+              <option selected>Choose...</option>
+              <option data-subtext="CSCI 161">Intro to Computer Science</option>
+              <option data-subtext="CSCI 261">Advanced Intro to Compuer Science </option>
+              <option data-subtex="CSCI 291">Programming Language Paradigms</option>
+              <option data-subtext="CSCI 240">Software Engineering</option>
+              <option data-subtext="CSCI 281">Assembly Language & Architecture</option>
+              <option data-subtext="CSCI "></option>
               <option>Senior</option>
             </select>
+            <span id="additionalCourses"></span>
+          <input id="addBtn" type="button" value= " + "/>
 
 
           </div>
