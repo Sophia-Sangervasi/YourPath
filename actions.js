@@ -4,7 +4,7 @@
 
 
 //handler to add more course drop downs
-("addBtn").click(function(){
+$("addBtn").click(function(){
   addMoreCourses();
 })
 
