@@ -7,7 +7,7 @@ function addCourse(){
   var select = $("#courses").clone().appendTo("#coursesTaken"); //this is the select we want to clone
   $(select).selectpicker('refresh');
   return;
-}
+};
 
 /*This function takes no args but controls when to delete a added course*/
 function deleteCourse(){
@@ -15,7 +15,7 @@ function deleteCourse(){
   $(toBeDeleted).selectpicker('refresh');
   return;
 
-}
+};
 
 //All the jQuery methods
 $(document).ready(function(){
@@ -33,5 +33,11 @@ $(document).ready(function(){
     deleteCourse();
   });
 
+/*This function will be triggered if the submit button is pressed and then a spinner will run*/
+$("#submit").click(function(){
+    $(this).prop("disabled", true);
+    $("spinner").show("true");
+    console.log("hello");
+  });
 
 });

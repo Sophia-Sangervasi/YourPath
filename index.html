@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -14,8 +14,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gojs@2.1/release/go.js"></script>
-        <script src= "actions.js"></script><!--This is the import for the UI on the webpage and methods>
+        <script src="https://unpkg.com/gojs@2.1/release/go.js"></script>
+        <script src= "actions.js"></script><!--This is the import for the UI on the webpage and methods-->
         <script src="treeDiagram.js"></script> <!--This is the import for the diagram js file-->
 
     <title>
@@ -100,6 +100,9 @@
           max-width:1200px;
           height:500px;
 
+      }
+      #loading{
+        display: flex;
       }
 
 
@@ -238,13 +241,13 @@
           <input type="button" id="addBtn" class="btn btn-light" value="add more courses">
 
           <div id="planBtnDiv">
-            <button id="submit"type="button" class="btn btn-success">Plan!</button>
-            <div class="spinner-border text-success" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-
+            <button id="submit" type="button" class="btn btn-success">Plan!<span id ="spinner" class="spinner-border spinner-border-sm text-success" role="status" aria-hidden="true">Loading...</span></button>
 
           </div>
+
+
+
+
 
 
       </div>
@@ -253,6 +256,8 @@
 
         <!--this is the canvas of the grap-->
         <div id="courseGraph"class ="bg-body rounded"></div>
+
+
 
 
 </div>
