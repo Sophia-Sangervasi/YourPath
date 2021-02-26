@@ -1,29 +1,37 @@
 
-//global variables
+//All the javascript methods that will be used with jquery
 
+/*This function takes no args but performs the action of cloning
+a new dropdown menu to select additional courses*/
+function addCourse(){
+  var select = $("#courses").clone().appendTo("#coursesTaken"); //this is the select we want to clone
+  $(select).selectpicker('refresh');
+  return;
+}
 
-
-//handler to add more course drop downs
-$("addBtn").click(function(){
-  addMoreCourses();
-})
-
-function addMoreCourses(){
-  var $newDD = $("#courses");
-
-    $newDD.append("<option selected>Choose...</option>");
-    $newDD.append("<option data-subtext='CSCI 161'>Intro to Computer Science</option>");
-  $newDD.append("<option data-subtext='CSCI 261'>Advanced Intro to Compuer Science </option>");
-  $newDD.append("<option data-subtext='Math 210'>Discrete Mathematics</option>");
-  $newDD.append("<option data-subtext='CSCI 291'>Programming Language Paradigms</option>");
-  $newDD.append("<option data-subtext='CSCI 240'>Software Engineering</option>");
-  $newDD.append("<option data-subtext='CSCI 281'>Assembly Language & Architecture</option>");
-  $newDD.append("<option data-subtext='CSCI 315'>Graphics</option>");
-  $newDD.append("<option data-subtext='CSCI 361'>Algorithms & Data Structures</option>");
-  $newDD.append("<option data-subtext='CSCI 325'>Networking</option>");
-  $newDD.append("<option data-subtext='CSCI 455'>Databases</option>");
-  $newDD.append("<option data-subtext='CSCI 475'>Operating Systems</option>");
-  $newDD.append("<option data-subtext='CSCI 431'>Artificial Intelligence</option>");
-  $newDD.append("<option data-subtext='CSCI 440'>Capstone</option>");
+/*This function takes no args but controls when to delete a added course*/
+function deleteCourse(){
+  var toBeDeleted = $("#courses").remove();
+  $(toBeDeleted).selectpicker('refresh');
+  return;
 
 }
+
+//All the jQuery methods
+$(document).ready(function(){
+
+  /*This function adds another course dropdown menu when the
+  add button has been clicked once*/
+  $("#addBtn").click(function(){
+    addCourse();
+  });
+
+
+  /*This function removes a course dropdown menu when the
+  delete button has been clicked once*/
+  $("#deleteBtn").click(function(){
+    deleteCourse();
+  });
+
+
+});

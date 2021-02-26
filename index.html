@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
-        <script src= "actions.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src ="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gojs@2.1/release/go.js"></script>
+        <script src= "actions.js"></script><!--This is the import for the UI on the webpage and methods>
+        <script src="treeDiagram.js"></script> <!--This is the import for the diagram js file-->
 
     <title>
       Your Path
@@ -39,15 +43,12 @@
       #intro{
         margin: 30px;
         text-align: block;
-        padding: 30px;
+        padding: 100px;
 
       }
 
       #container {
-        margin-top: 50px;
-        margin-right: 15px;
-        float: left;
-        padding: 5px;
+        margin: auto;
         overflow: hidden;
       }
 
@@ -79,6 +80,27 @@
         margin-right: auto;
         width: 50%;
       }
+      .container{
+        padding: 10px;
+        margin-left: 30px;
+
+      }
+      .selectpicker{
+        width:'fit';
+      }
+      #submit{
+        float:right;
+        margin-right: 75px;
+
+      }
+      #courseGraph{
+        margin: 50px auto;
+        display: block;
+         border: solid 1px black;
+          max-width:1200px;
+          height:500px;
+
+      }
 
 
 
@@ -91,7 +113,7 @@
 
 
 
-      <div id = "container">
+      <div id = "container" class="container shadow p-3 mb-5 bg-body rounded">
 
         <figure>
           <img src ="yp.PNG" class ="center" style="width:536px;height:367px;" >
@@ -149,7 +171,7 @@
           </div>
 
 
-          <div class= "container">
+    <div id ="questions" class= "container">
 
             <div id= "whatMajor">
               <h4>What is your major?</h4>
@@ -172,6 +194,8 @@
               <option>Senior</option>
             </select>
 
+          </div>
+
             <div id="whatSemester">
               <h4>What semester are you in?</h4>
               <label>Please choose your current semester</label>
@@ -185,6 +209,7 @@
 
           </div>
 
+          <!--This is the courses taken dropdown-->
           <div id="coursesTaken">
             <h4>What courses have you taken?</h4>
             <label>Please choose your courses</label>
@@ -205,13 +230,36 @@
               <option data-subtext="CSCI 440">Capstone</option>
 
             </select>
-            <span id="additionalCourses"></span>
-          <input id="addBtn" type="button" value= " + "/>
+
+            <!--this is the add more courses button-->
+
+            <!--<input type ="button" id="deleteBtn" class="btn btn-light" value= "delete course">-->
+          </div>
+          <input type="button" id="addBtn" class="btn btn-light" value="add more courses">
+
+          <div id="planBtnDiv">
+            <button id="submit"type="button" class="btn btn-success">Plan!</button>
+            <div class="spinner-border text-success" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
 
 
           </div>
 
+
       </div>
+
+
+
+        <!--this is the canvas of the grap-->
+        <div id="courseGraph"class ="bg-body rounded"></div>
+
+
+</div>
+
+
+
+
 
 
 
